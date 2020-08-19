@@ -4,10 +4,6 @@ import matplotlib.pyplot as plt
 
 
 class NeuralNetwork:
-    """
-    A neural network model with one hidden layer.
-    """
-
     def __init__(self, inputNodes, hiddenNodes, outputNodes, learningRate):
         # node matrices
         self.inodes = inputNodes
@@ -16,8 +12,10 @@ class NeuralNetwork:
         # Learning rate (alpha)
         self.lr = learningRate
         # link weight matrices wih(in-hidden) and who(hidden-out)
-        self.wih = (numpy.random.normal(0.0, pow(self.inodes, - 0.5)))
-        self.who = (numpy.random.normal(0.0, pow(self.onodes, - 0.5)))
+        self.wih = numpy.random.normal(
+            0.0, pow(self.inodes, -0.5), (self.hnodes, self.inodes))
+        self.who = numpy.random.normal(
+            0.0, pow(self.hnodes, -0.5), (self.onodes, self.hnodes))
         # activation function is the sigmoid function
         self.activation_function = lambda x: scipy.special.expit(x)
 
@@ -60,3 +58,6 @@ class NeuralNetwork:
         final_inputs = numpy.dot(self.who, hidden_outputs)
         final_outputs = self.activation_function(final_inputs)
         return final_outputs
+
+
+# model = NeuralNetwork(5, 5, 5, 0.1)

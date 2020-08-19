@@ -1,3 +1,7 @@
 # This file is too large, You can get the original file at the following site:
 # http://www.pjreddie.com/media/files/mnist_train.csv
 Data/mnist_train.csv
+
+__pycache__
+
+model.txt
