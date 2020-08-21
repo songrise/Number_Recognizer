@@ -4,4 +4,4 @@ Data/mnist_train.csv
 
 __pycache__
 
-model.txt
+temp.py

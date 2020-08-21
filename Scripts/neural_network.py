@@ -59,5 +59,3 @@ class NeuralNetwork:
         final_outputs = self.activation_function(final_inputs)
         return final_outputs
 
-
-# model = NeuralNetwork(5, 5, 5, 0.1)
