@@ -8,7 +8,7 @@ def recognize_1_sample(Model: NeuralNetwork):
     """
     randomly show a pic in the test dataset and return the recognized number.
     """
-    with open("Data\\mnist_test.csv", "r") as test_data_file:
+    with open("..\\Data\\mnist_test.csv", "r") as test_data_file:
         test_row = 9999
         # Randomly pick a test entry in the test data file
         test_data_list = test_data_file.readlines()

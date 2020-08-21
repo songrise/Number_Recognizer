@@ -12,7 +12,7 @@ def train(input_nodes: int, hidden_nodes: int, output_nodes: int, learning_rate:
                           output_nodes, learning_rate)
 
     ######Training#######
-    with open("Data\\mnist_train.csv", "r") as train_data_file:
+    with open("..\\Data\\mnist_train.csv", "r") as train_data_file:
         training_data_list = train_data_file.readlines()
         print("Training Started")
         for e in range(epochs):
@@ -32,7 +32,7 @@ def train(input_nodes: int, hidden_nodes: int, output_nodes: int, learning_rate:
         print("Training Finished")
 
     ########Testing#####
-    with open("Data\\mnist_test.csv", "r") as test_data_file:
+    with open("..\\Data\\mnist_test.csv", "r") as test_data_file:
         test_data_list = test_data_file.readlines()
         # test the neural network
 
@@ -66,8 +66,8 @@ def train(input_nodes: int, hidden_nodes: int, output_nodes: int, learning_rate:
         # Save the trained model
         # NN infos
 
-    numpy.save("Model\\parameters.npy", numpy.asfarray(
+    numpy.save("..\\Model\\parameters.npy", numpy.asfarray(
         [model.inodes, model.hnodes, model.onodes, model.lr]))
-    numpy.save("Model\\weight_ih.npy", model.wih)
-    numpy.save("Model\\weight_ho.npy", model.who)
+    numpy.save("..\\Model\\weight_ih.npy", model.wih)
+    numpy.save("..\\Model\\weight_ho.npy", model.who)
     print("Model Saved")

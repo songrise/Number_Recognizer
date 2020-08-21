@@ -34,12 +34,12 @@ def main():
         train(input_nodes, hidden_nodes, output_nodes, learning_rate, epochs)
 
     # load the trained model data
-    model_parameters = numpy.load("Model\\parameters.npy").tolist()
+    model_parameters = numpy.load("..\\Model\\parameters.npy").tolist()
     # cast the data type of layer number into integer, while leaving the learning rate entry float
     model_parameters = list(
         map(int, model_parameters[:3])) + [model_parameters[-1]]
-    model_wih = numpy.load("Model\\weight_ih.npy")
-    model_who = numpy.load("Model\\weight_ho.npy")
+    model_wih = numpy.load("..\\Model\\weight_ih.npy")
+    model_who = numpy.load("..\\Model\\weight_ho.npy")
 
     # set up the model, list unpack here
     model = NeuralNetwork(*model_parameters)

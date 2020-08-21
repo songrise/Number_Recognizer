@@ -1,6 +1,6 @@
 # Number_Recognizer
 # Hand-written number recognizer based on Neural Networks (基于神经网络的手写数字识别器)
-
+![dtLAJJ.png](https://s1.ax1x.com/2020/08/21/dtLAJJ.png)
 ## Prerequisite
 - Python 3.8 64-bit
 - numpy 1.18.5
